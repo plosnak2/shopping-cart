@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FiShoppingCart } from 'react-icons/fi';
-import './navbar.css';
+import './styles.css';
 
 export const CustomNavbar: FC = ({}) => {
     const { items, addItem } = useContext(ShoppingContext) as ShoppingContextInterface;
