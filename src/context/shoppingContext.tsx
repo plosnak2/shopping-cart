@@ -11,12 +11,21 @@ const ShoppingProvider: React.FC<Props> = ({ children }) => {
     const [items, setItems] = React.useState<IItem[]>([]);
 
     const addItem = (item: IItem) => {
-        console.log("adding item")
+        setItems([...items, item])
         return
     }
 
     const removeItem = (item: IItem) => {
-        console.log("deleting item")
+        let index = -1
+        items.map((it, ind) =>{
+          if(it.name === item.name){
+            index = ind
+          }
+        })
+        let array = [...items]
+        array.splice(index, 1)
+        setItems(array)
+        console.log(items)
         return
     }
 

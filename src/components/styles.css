@@ -43,6 +43,23 @@
     margin-top: 20px;
 }
 
+.card-adder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-adder p {
+    font-size: 2em;
+    margin: 0;
+    padding: 5px;
+    font-weight:500
+}
+
+.card-adder Button {
+    width: 3em;
+}
+
 @media (max-width: 993px) {
     .items {
         gap: 4%;
