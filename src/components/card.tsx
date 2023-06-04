@@ -25,10 +25,10 @@ export const CustomCard: FC<IItem> = ({name, image, price}) => {
                     <Card.Title>{price}€</Card.Title>
                 </div>
                 {
-                    itemsInCart(name) === 0 ? <div style={{paddingTop:"10px", paddingBottom:"10px"}}><Button variant="success" onClick={() => addItem({name: name, image: image, price: price})}>Add to cart</Button></div> : 
+                    itemsInCart(name) === 0 ? <div style={{paddingTop:"1.51px", paddingBottom:"1.51px"}}><Button variant="success" onClick={() => addItem({name: name, image: image, price: price})}>Add to cart</Button></div> : 
                     <div className="card-adder">
                         <Button variant="success" onClick={() => addItem({name: name, image: image, price: price})}>+</Button>
-                        <p>{itemsInCart(name)}</p>
+                        <p>In cart: {itemsInCart(name)}</p>
                         <Button variant="success" onClick={() => removeItem({name: name, image: image, price: price})}>-</Button>
                     </div>
                 }
